@@ -37,7 +37,7 @@ namespace JsonTools
             {
 
                 return JsonSerializer.Deserialize<T[]>(JsonString,
-                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true }); 
 
             }
         }
