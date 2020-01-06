@@ -9,7 +9,7 @@ namespace JsonTools
          * of your choice.
          * OR
          * To Serialize any object of your choice into an JSON string
-         * Written BY Theo Uys 6 JAN 2020
+         * Written BY Theo Uys 6 JAN 2020 
           ===========================================================================================*/
         public class JsonTools<T>
         {
