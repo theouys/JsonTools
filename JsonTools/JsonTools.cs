@@ -20,7 +20,18 @@ namespace JsonTools
         * to an dll then reference the dll to your project.
         * JsonTools myjson = new JsonTools<Product> //Where Product is your C# class
         * myjson.Deserialize(your_json_string); //Will return a List of IEnumerable List of your Product 
-        * class
+        * class.
+        * 
+        * I use a class define in my project called Product as an example.
+        * 
+        * Example:
+        * public IEnumerable<Product> GetProducts()
+        {
+            JsonTools<Product> retObject = new JsonTools<Product>();
+            string myjsontxt = File.OpenText(JsonFileName).ReadToEnd();
+            return retObject.Deserialize(myjsontxt);
+              
+        }
           ===========================================================================================*/
         public IEnumerable<T> Deserialize(string JsonString)
             {
