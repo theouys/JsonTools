@@ -47,6 +47,10 @@ namespace JsonTools
 
         /*===========================================================================================
          * This function will take an List of IEnumarable object and return a Json string.
+         * Example (Where product is the class passed into this JsonTools):
+         * List<Product> prod = new List<Product>();
+         * JsonTools<prod> retObject = new JsonTools<prod>();
+         * string s =  retObject.JsonSerialize(prod);
           ===========================================================================================*/
         public string JsonSerialize(T ObjectPassedIn)
         {
