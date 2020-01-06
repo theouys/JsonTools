@@ -33,12 +33,29 @@ namespace JsonTools
               
         }
           ===========================================================================================*/
+
+
+        
+        
         public IEnumerable<T> Deserialize(string JsonString)
             {
 
                 return JsonSerializer.Deserialize<T[]>(JsonString,
-                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true }); 
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-            }
         }
+
+        /*===========================================================================================
+         * This function will take an List of IEnumarable object and return a Json string.
+          ===========================================================================================*/
+        public string JsonSerialize(T ObjectPassedIn)
+        {
+            string jsonString;
+            jsonString = JsonSerializer.Serialize(ObjectPassedIn);
+            return jsonString;
+
+        }
+    }
+
+   
 }
